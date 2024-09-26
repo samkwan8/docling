@@ -957,22 +957,26 @@ files = [
 
 [[package]]
 name = "docling-core"
-version = "1.6.2"
+version = "1.6.3"
 description = "A python library to define and validate data types in Docling."
 optional = false
-python-versions = "<4.0,>=3.9"
-files = [
-    {file = "docling_core-1.6.2-py3-none-any.whl", hash = "sha256:1473ab13910d76552015c10fe351b90079a00c225f76ada3cd4fc7442183ffd0"},
-    {file = "docling_core-1.6.2.tar.gz", hash = "sha256:63f2b8a683dec56568ee1cd7d25cea419c0291211a88a11f74079ff2d62ccd5e"},
-]
+python-versions = "^3.9"
+files = []
+develop = false
 
 [package.dependencies]
-json-schema-for-humans = ">=1.0.0,<2.0.0"
-jsonref = ">=1.1.0,<2.0.0"
-jsonschema = ">=4.16.0,<5.0.0"
-pandas = ">=2.2.2,<3.0.0"
-pydantic = ">=2.6.0,<3.0.0"
-tabulate = ">=0.9.0,<0.10.0"
+json-schema-for-humans = "^1.0.0"
+jsonref = "^1.1.0"
+jsonschema = "^4.16.0"
+pandas = "^2.2.2"
+pydantic = "^2.6.0"
+tabulate = "^0.9.0"
+
+[package.source]
+type = "git"
+url = "https://github.com/DS4SD/docling-core.git"
+reference = "feat/metadata-extr-and-id-gen"
+resolved_reference = "dd1a467780c43e36898a5dbc7d629ef31c79dce3"
 
 [[package]]
 name = "docling-ibm-models"
@@ -7220,4 +7224,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "f8a98ea2e66c8fdf190e0e33b074fbe9399fb90508427aad01a78ed4f4749d17"
+content-hash = "0c70207f2d542c38f6c9423befa7dda03ebacdc366f53fa551320ef0a1f17d00"
