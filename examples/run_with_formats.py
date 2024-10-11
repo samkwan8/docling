@@ -5,7 +5,6 @@ from docling.backend.docling_parse_backend import DoclingParseDocumentBackend
 from docling.backend.msword_backend import MsWordDocumentBackend
 from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 from docling.datamodel.base_models import InputFormat
-from docling.datamodel.document import DocumentConversionInput
 from docling.document_converter import (
     DocumentConverter,
     FormatOption,
@@ -26,7 +25,6 @@ input_paths = [
     Path("tests/data/powerpoint_sample.pptx"),
     Path("tests/data/2206.01062.pdf"),
 ]
-input = DocumentConversionInput.from_paths(input_paths)
 
 ## for defaults use:
 # doc_converter = DocumentConverter()
@@ -48,7 +46,7 @@ doc_converter = DocumentConverter(  # all of the below is optional, has internal
     },
 )
 
-conv_results = doc_converter.convert(input)
+conv_results = doc_converter.convert_all(source=input_paths)
 
 for res in conv_results:
     out_path = Path("./scratch") / f"{res.input.file.name}.experimental.md"
